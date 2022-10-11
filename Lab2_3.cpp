@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <locale.h>
 
 float dgr_x(float x, int i) {
     float p = x;
@@ -10,15 +9,14 @@ float dgr_x(float x, int i) {
 
 int main() 
 {
-    setlocale(LC_ALL, "Rus");
     float x, S = 0; int N;
-    printf("Введите N: ");
+    printf("Enter N: ");
     scanf_s("%d", &N);
     if (N <= 0) {
-        printf("Неверное значение N!");
+        printf("Wrong N!");
         return 0;
     }
-    printf("Введите X: ");
+    printf("Enter x: ");
     scanf_s("%f", &x);
     int n = 2 * N + 1;
 
@@ -35,5 +33,5 @@ int main()
         }
     }
     S = x + S;
-    printf("Значение выражения равно %f", S);
+    printf("Result is %f", S);
 }
